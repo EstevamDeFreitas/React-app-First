@@ -8,7 +8,7 @@ import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
-export function App1() {
+export function Start() {
   const navigation = useNavigation<any>();
 
   const handleNavigate = () => {

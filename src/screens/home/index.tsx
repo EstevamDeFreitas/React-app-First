@@ -9,7 +9,7 @@ import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
 import { styles } from './styles';
 
-export function App2() {
+export function Home() {
   const [nome, setNome] = useState('');
 
   const navigation = useNavigation<any>();
