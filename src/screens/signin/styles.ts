@@ -13,10 +13,10 @@ export const styles = StyleSheet.create({
     },
     imageLogo: {
       marginTop: 20,
-      marginBottom: 10
+      marginBottom: 30
     },
     content: {
-      marginTop: -15,
+      marginTop: -40,
       paddingHorizontal: 50
     },
     title: {
