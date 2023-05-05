@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { Routes } from './src/routes';
+import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function App() {
   const [nome, setNome] = useState('');
@@ -10,24 +12,9 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
-      <Text>Escrevi e sai correndo...</Text>
-      <StatusBar style="auto" />
-      <TextInput
-        placeholder="Digite o seu nome"
-        onChangeText={texto => setNome(texto)}
-        value={nome}
-      />
-      <Button title="Enviar" onPress={enviarFormulario} />
-    </View>
+    <>
+      <StatusBar hidden />
+      <Routes />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
