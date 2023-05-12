@@ -7,6 +7,7 @@ import { styles } from './styles';
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+import { ButtonWhite } from '../../components/ButtonWhite';
 
 export function Start() {
   const navigation = useNavigation<any>();
@@ -33,11 +34,7 @@ export function Start() {
           resizeMode="stretch"
         />
       <View style={styles.container}>
-        <RectButton onPress={handleNavigate} >
-          <Text style={styles.title}>
-            Continuar
-          </Text>
-        </RectButton>
+        <ButtonWhite title="Continuar" onPress={handleNavigate} />
       </View>
 
     </LinearGradient>

@@ -7,6 +7,7 @@ import { styles } from './styles';
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+import { ButtonWhite } from '../../components/ButtonWhite';
 
 export function Signin() {
   const navigation = useNavigation<any>();
@@ -32,11 +33,7 @@ export function Signin() {
           Tela Signin
         </Text>
       <View style={styles.container}>
-        <RectButton onPress={handleNavigate} >
-          <Text style={styles.title}>
-            Voltar
-          </Text>
-        </RectButton>
+      <ButtonWhite title="Voltar" onPress={handleNavigate} />
       </View>
 
     </LinearGradient>

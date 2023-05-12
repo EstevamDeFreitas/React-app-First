@@ -8,6 +8,7 @@ import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
 import { styles } from './styles';
+import { ButtonWhite } from '../../components/ButtonWhite';
 
 export function Home() {
   const [nome, setNome] = useState('');
@@ -49,23 +50,9 @@ export function Home() {
           resizeMode="stretch"
         />
 
-        <RectButton onPress={handleNavigateSignin} >
-          <Text style={styles.title}>
-            Tela Signin
-          </Text>
-        </RectButton>
-
-        <RectButton onPress={handleNavigateReset} >
-          <Text style={styles.title}>
-            Tela Reset
-          </Text>
-        </RectButton>
-
-        <RectButton onPress={handleNavigate} >
-          <Text style={styles.title}>
-            Voltar
-          </Text>
-        </RectButton>
+        <ButtonWhite title="Signin" onPress={handleNavigateSignin} />
+        <ButtonWhite title="Reset" onPress={handleNavigateReset} />
+        <ButtonWhite title="Voltar" onPress={handleNavigate} />
 
       </View>
 

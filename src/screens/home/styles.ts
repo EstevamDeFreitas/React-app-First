@@ -7,13 +7,16 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       padding: 0
     },
+    scrollview:{
+      width:'90%'
+    },
     image: {
       width: '100%',
       height: 360,
     },
     imageLogo: {
-      marginTop: 20,
-      marginBottom: 10
+      marginTop: 5,
+      marginBottom: 5
     },
     content: {
       marginTop: -15,
@@ -24,7 +27,7 @@ export const styles = StyleSheet.create({
       textAlign: 'center',
       fontWeight: 'bold',
       fontSize: 40,
-      marginBottom: 16,
+      marginBottom: 5,
       lineHeight: 40
     },
     subtitle: {
@@ -32,7 +35,7 @@ export const styles = StyleSheet.create({
       fontSize: 20
       ,
       textAlign: 'center',
-      marginBottom: 64,
+      marginBottom: 10,
       lineHeight: 25
     }
   
