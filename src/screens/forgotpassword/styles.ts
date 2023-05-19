@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   controlsbutons: {
     marginTop: 30,
     width: '100%',
-    paddingHorizontal: 35
+    paddingHorizontal: 35,
   },
   controls: {
     marginTop: 0,

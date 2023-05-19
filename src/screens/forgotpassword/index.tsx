@@ -11,22 +11,15 @@ import { Button } from "../../components/Button";
 import { TextInput } from "react-native-gesture-handler";
 import { ButtonWhite } from "../../components/ButtonWhite";
 import { useNavigation } from "@react-navigation/native";
+import { ButtonPurple } from "../../components/ButtonPurple";
 
-export function SignIn() {
+export function ForgotPassword() {
 
 
   const navigation = useNavigation<any>();
 
-  const handleNavigateHome = () => {
-    navigation.navigate("Home");
-  };
-
-  const handleNavigateConfrimEmail = () => {
-    navigation.navigate("ConfirmEmail");
-  };
-
-  const handleNavigateForgotPassword = () => {
-    navigation.navigate("ForgotPassword");
+  const handleNavigate = () => {
+    navigation.navigate("Signin");
   };
 
   return (
@@ -35,8 +28,11 @@ export function SignIn() {
 
       <View style={styles.content}>
         <Text style={styles.title}>
-          Bem Vindos de Volta {"\n"}
-          Sentimos sua Falta {"\n"}
+          Esqueceu a senha? {"\n"}
+        </Text>
+
+        <Text style={styles.label}>
+            Digite seu email para receber as instruções para redefinir sua senha
         </Text>
 
         <Text style={styles.label}>E-mail {"\n"}</Text>
@@ -47,32 +43,10 @@ export function SignIn() {
           placeholderTextColor={theme.colors.primary}
           maxLength={20}
         ></TextInput>
-        <Text style={styles.label}>Senha {"\n"}</Text>
-        <TextInput
-          style={styles.input}
-          keyboardType="number-pad"
-          placeholder="Insira senha (apenas numeros)"
-          maxLength={6}
-          secureTextEntry
-          placeholderTextColor={theme.colors.primary}
-        ></TextInput>
-
-        <View style={styles.controls}>
-          <Text style={styles.label}>Lembrar de Mim</Text>
-          <Text style={styles.label} onPress={handleNavigateForgotPassword}>Esqueci Minha Senha</Text>
-        </View>
       </View>
 
       <View style={styles.controlsbutons}>
-        <Button title="Continuar" onPress={handleNavigateConfrimEmail} />
-        <Text>{"\n"}</Text>
-        <ButtonWhite title="Voltar" onPress={handleNavigateHome}/>
-      </View>
-      <Image source={linha} style={styles.linha} />
-      <View style={styles.controls}>
-        <Image source={google} style={styles.linha} />
-        <Image source={facebook} style={styles.linha} />
-        <Image source={apple} style={styles.linha} />
+        <ButtonPurple title="Recuperar senha" onPress={handleNavigate} />
       </View>
     </View>
   );
